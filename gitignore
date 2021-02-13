@@ -1,0 +1,11 @@
+# ignore the controllers folder
+controllers
+
+# ignore the vendor folder 
+vendor
+
+# ignore all text files
+*.txt
+
+# ignore vscode files
+*.code-workspace
