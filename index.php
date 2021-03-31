@@ -16,11 +16,22 @@
         <a href="https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form" target="_blank">Password reset</a>
 
         <div class="d-flex flex-row justify-content-center">
-            <div class="card p-3" id="intro" style="width: 40vw;">
-                <div>
-                    <span id="intro-retireAgeWarning" style="visibility: hidden;">Retirement Age Must Be Greater Than Your Current Age</span>
-                </div>
+            <div class="card p-3" id="intro-form" style="width: 40vw;">
+                <!-- <div style="height: 48px;">
+                    <span id="intro-retireAgeWarning" style="visibility: hidden;" class="alert alert-danger">Retirement Age Must Be Greater Than Your Current Age</span>
+                </div> -->
                 <p>Content/Instructions...</p>
+                <div class="form-group">
+                    <label for="intro-sex">Are you:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="intro-sex" id="intro-sex-male" value="male">
+                        <label class="form-check-label" for="intro-sex-male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="intro-sex" id="intro-sex-female" value="female">
+                        <label class="form-check-label" for="intro-sex-female">Female</label>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label for="intro-age">How Old Are You?</label>
                     <input type="number" class="form-control" name="intro-age" id="intro-age" placeholder="Current Age">
@@ -28,7 +39,6 @@
                 <div class="form-group">
                     <label for="intro-retireAge">When Do You Want To Retire? </label>
                     <input type="number" class="form-control" name="intro-retireAge" id="intro-retireAge" placeholder="Retirement Age">
-                    Test to make sure retirement age is greater than current age
                 </div>
                 <div class="form-group">
                     <label for="intro-targetIncome">What Is Your Target Annual Income? <span id="intro-subdue">(In Today's Dollars)</span></label>
@@ -46,8 +56,9 @@
                     <input type="submit" class="form-control btn btn-outline-primary" name="intro-submit" id="intro-submit" value="Calculate">            
                 </div>
             </div>
-            <div class="card p-3" id="intro" style="width: 40vw;">
-                <p>Show the Amount Needed at Retirement. Then show the amount to save per year and per month to get there.</p>
+            <div class="card p-3" id="intro-results" style="width: 40vw;">
+                <p>To retire by <span id="intro-results-retAge"></span>, you will need to have saved <span id="intro-results-nestEgg"></span> by retirement. </p>
+                <p>Based on your current savings and estate requirements, you will need to save <span id="intro-results-monthlySave"></span> per month until retirement.</p>
             </div>
         </div>
 
@@ -66,6 +77,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="#"></script>
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/forecast.js"></script>
 </body>
 </html>
