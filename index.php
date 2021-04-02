@@ -16,13 +16,13 @@
         <a href="https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form" target="_blank">Password reset</a>
 
         <div class="d-flex flex-row justify-content-center">
-            <div class="card p-3" id="intro-form" style="width: 40vw;">
+            <div class="p-3" id="intro-form">
                 <!-- <div style="height: 48px;">
                     <span id="intro-retireAgeWarning" style="visibility: hidden;" class="alert alert-danger">Retirement Age Must Be Greater Than Your Current Age</span>
                 </div> -->
-                <p>Content/Instructions...</p>
-                <div class="form-group">
-                    <label for="intro-sex">Are you:</label>
+                <p id="intro-head">Your Details</p>
+                <div class="form-group d-flex justify-content-center">
+                    <label for="intro-sex">Are you:  </label>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="intro-sex" id="intro-sex-male" value="male">
                         <label class="form-check-label" for="intro-sex-male">Male</label>
@@ -34,29 +34,31 @@
                 </div>
                 <div class="form-group">
                     <label for="intro-age">How Old Are You?</label>
-                    <input type="number" class="form-control" name="intro-age" id="intro-age" placeholder="Current Age">
+                    <input type="number" class="form-control form-control-sm" name="intro-age" id="intro-age" placeholder="Current Age">
                 </div>
                 <div class="form-group">
                     <label for="intro-retireAge">When Do You Want To Retire? </label>
-                    <input type="number" class="form-control" name="intro-retireAge" id="intro-retireAge" placeholder="Retirement Age">
+                    <input type="number" class="form-control form-control-sm" name="intro-retireAge" id="intro-retireAge" placeholder="Retirement Age">
                 </div>
                 <div class="form-group">
-                    <label for="intro-targetIncome">What Is Your Target Annual Income? <span id="intro-subdue">(In Today's Dollars)</span></label>
-                    <input type="number" class="form-control" name="intro-targetIncome" id="intro-targetIncome" placeholder="Annual Income">            
+                    <label for="intro-targetIncome">What Is Your Target Retirement Income? 
+                        <!-- <span id="intro-subdue">(In Today's Dollars)</span> -->
+                    </label>
+                    <input type="number" class="form-control form-control-sm" name="intro-targetIncome" id="intro-targetIncome" placeholder="Annual Retirement Income">            
                 </div>
                 <div class="form-group">
                     <label for="intro-principal">How Much Have You Already Saved? <span id="intro-subdue">(Optional)</span></label>
-                    <input type="number" class="form-control" name="intro-principal" id="intro-principal" placeholder="Current Savings">
+                    <input type="number" class="form-control form-control-sm" name="intro-principal" id="intro-principal" placeholder="Current Savings & Investments">
                 </div>
                 <div class="form-group">
                     <label for="intro-estate">Do You Want To Leave An Estate? <span id="intro-subdue">(Optional)</span></label>
-                    <input type="number" class="form-control" name="intro-estate" id="intro-estate" placeholder="For The Kids">
+                    <input type="number" class="form-control form-control-sm" name="intro-estate" id="intro-estate" placeholder="For The Kids">
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="form-control btn btn-outline-primary" name="intro-submit" id="intro-submit" value="Calculate">            
+                    <input type="submit" class="form-control btn btn-outline-success" name="intro-submit" id="intro-submit" value="Calculate">            
                 </div>
             </div>
-            <div class="card p-3" id="intro-results" style="width: 40vw;">
+            <div class="p-3" id="intro-results">
                 <p>To retire by <span id="intro-results-retAge"></span>, you will need to have saved <span id="intro-results-nestEgg"></span> by retirement. </p>
                 <p>Based on your current savings and estate requirements, you will need to save <span id="intro-results-monthlySave"></span> per month until retirement.</p>
             </div>

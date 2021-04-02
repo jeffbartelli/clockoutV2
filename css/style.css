@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 body {
@@ -6,6 +7,10 @@ body {
 }
 
 li { list-style-type: none; }
+
+.form-group {
+  font-family: 'Noto Sans';
+}
 
 .form-wrapper {
   margin: 50px auto 50px;
@@ -67,4 +72,35 @@ h4 {
   color: firebrick;
   background-color: mistyrose;
   text-align: center;
+}
+
+label {
+  font-size: 14px;
+}
+
+.form-group {
+  border-top: 1px solid #a3bbb1;
+}
+
+.form-group:last-child {
+  border-top: none;
+}
+
+#intro-form {
+  background-color: #edffed;
+}
+#intro-head {
+  color: #5cb85c;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+#intro-subdue {
+  font-size: 12px;
+  color: #939fa7;
+}
+
+#intro-results {
+  border: 1px solid #edffed;
 }
