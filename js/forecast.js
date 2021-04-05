@@ -22,6 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('intro-submit').addEventListener('click', () => {
+        let div1 = document.getElementById('intro-form');
+        let div2 = document.getElementById('intro-results');
+        div2.style.width = div1.style.width;
+        console.log(div1.offsetWidth);
+        console.log(div2.offsetWidth);
+        // const slideRight = elem => elem.style.width = `${elem.scrollWidth}px`;
+        // slideRight(document.getElementById("intro-results"));
+        
+        
         let sex = document.querySelector('input[name="intro-sex"]:checked').value;
         let age = document.getElementById('intro-age').value;
         let retireAge = document.getElementById('intro-retireAge').value;

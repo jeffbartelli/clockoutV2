@@ -58,9 +58,18 @@
                     <input type="submit" class="form-control btn btn-outline-success" name="intro-submit" id="intro-submit" value="Calculate">            
                 </div>
             </div>
-            <div class="p-3" id="intro-results">
-                <p>To retire by <span id="intro-results-retAge"></span>, you will need to have saved <span id="intro-results-nestEgg"></span> by retirement. </p>
-                <p>Based on your current savings and estate requirements, you will need to save <span id="intro-results-monthlySave"></span> per month until retirement.</p>
+            <div class="p-3 d-flex flex-column align-items-center" id="intro-results">
+                <p>To retire at:</p> 
+                <p id="intro-results-retAge">XX</p>
+                <p>will need to have saved</p> 
+                <p id="intro-results-nestEgg">$0,000</p> 
+                <p>by retirement. Based on your information you will need to save:</p> 
+                <p id="intro-results-monthlySave">$0,000</p> 
+                <p>per month until retirement.</p>
+                <p id="intro-results-hook">With Social Security, pensions, and other accounts, you may not even need to save that. Clockout can help you sort out the specifics, so you can retire earlier than you thought.</p>
+                <div class="form-group">
+                    <input type="submit" class="form-control btn btn-success" name="intro-register" id="intro-register" value="Start Now">            
+                </div>
             </div>
         </div>
 

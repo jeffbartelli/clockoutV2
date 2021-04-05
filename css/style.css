@@ -45,7 +45,7 @@ li { list-style-type: none; }
 .form-wrapper.auth button:hover:enabled { background-color: #0d612a; }
 
 .navbar { 
-  background: linear-gradient(#dbffdb 0%, #393e41 8%,#393e41 85%,#dbffdb 95%, transparent 100%);
+  background: linear-gradient(#393e41 0%,#393e41 85%,#dbffdb 95%, transparent 100%);
 }
 
 @media only screen and (max-width: 991px) {
@@ -76,6 +76,7 @@ h4 {
 
 label {
   font-size: 14px;
+  padding-top: 9px;
 }
 
 .form-group {
@@ -103,4 +104,18 @@ label {
 
 #intro-results {
   border: 1px solid #edffed;
+  font-size: larger;
+  /* transition:width 1s ease-out; */
+  width:340px;
+  /* overflow:hidden; */
+}
+
+#intro-results-retAge, #intro-results-nestEgg, #intro-results-monthlySave {
+  font-weight: bolder;
+  font-size: xx-large;
+  
+}
+
+#intro-results-hook {
+  font-size: medium;
 }
