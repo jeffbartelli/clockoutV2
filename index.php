@@ -19,54 +19,80 @@
             <li class="four"></li>
         </ul>
         <div class="container">
+            <div class="cardPack">
+            
             <div class="newCard">
                 <div class="content">
                     <h2>Welcome to Clockout</h2>
-                    <h3>When Can You Retire?</h3>
-                    <p>Explanation for why you should use this tool.</p>
-                    <div style="height: 48px;">
-                        <span id="intro-retireAgeWarning" style="visibility: hidden;" class="alert alert-danger">Retirement Age Must Be Greater Than Your Current Age</span>
-                    </div>
-                    <div class="form-group d-flex justify-content-center">
-                    <!-- <label for="intro-sex">Are you:  </label> -->
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="intro-sex" id="intro-sex-male" value="male">
-                        <label class="form-check-label" for="intro-sex-male">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="intro-sex" id="intro-sex-female" value="female">
-                        <label class="form-check-label" for="intro-sex-female">Female</label>
-                    </div>
-                </div>
-                <label for="intro-age">How Old Are You?</label>
-                <input type="number" class="form-control form-control-sm" name="intro-age" id="intro-age" placeholder="Current Age">
-
-                <label for="intro-retireAge">When Do You Want To Retire? </label>
-                <input type="number" class="form-control form-control-sm" name="intro-retireAge" id="intro-retireAge" placeholder="Retirement Age">
-
-                <label for="intro-targetIncome">What Is Your Target Retirement Income? 
-                    <span id="intro-subdue">(In Today's Dollars)</span>
-                </label>
-                <input type="number" class="form-control form-control-sm" name="intro-targetIncome" id="intro-targetIncome" placeholder="Annual Retirement Income"> 
-
-                <label for="intro-principal">How Much Have You Already Saved? <span id="intro-subdue">(Optional)</span></label>
-                <input type="number" class="form-control form-control-sm" name="intro-principal" id="intro-principal" placeholder="Current Savings & Investments">
-
-                <label for="intro-estate">Do You Want To Leave An Estate? <span id="intro-subdue">(Optional)</span></label>
-                <input type="number" class="form-control form-control-sm" name="intro-estate" id="intro-estate" placeholder="For The Kids">
-
-                <input type="submit" class="form-control cardButton" name="intro-submit" id="intro-submit" value="Calculate">
-                <a href="https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form" target="_blank">Password reset</a>
+                    <h3>The web's best retirement toolbox</h3>
+                    <p>Clockout provides a complete toolset for planning for your retirement. Start with the basic retirement calculator below to determine how much money you will need to save to retire by your target retirement date. On click, the screen should scroll to the next card.</p>
+                    <a href="https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form" target="_blank">Password reset</a>
+                    <a href="#" class="cardButton">Get Started</a>
                 </div>
             </div>
 
             <div class="newCard">
                 <div class="content">
-                    <h2>Calculator</h2>
-                    <h3>How To...</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eum est aperiam eveniet! </p>
-                    <a href="#" class="cardButton">Get Started</a>
+                    <h2>Retirement Calculator</h2>
+                    <h3>When Can You Retire?</h3>
+                    <!-- <div style="height: 48px;">
+                        <span id="intro-retireAgeWarning" style="visibility: hidden;" class="alert alert-danger">Retirement Age Must Be Greater Than Your Current Age</span>
+                    </div> -->
+                    <div id="intro-form">
+                    <p>Explanation for why and how to use this tool.</p>
+                    <div>
+                        <label for="intro-sex">Gender:</label>
+                        <input class="" type="radio" name="intro-sex" id="intro-sex-male" value="male">
+                        <label class="" for="intro-sex-male">Male</label>
+                        <input class="" type="radio" name="intro-sex" id="intro-sex-female" value="female">
+                        <label class="" for="intro-sex-female">Female</label>
+                    </div>
+                    <label for="intro-age">How Old Are You?</label>
+                    <input type="number" name="intro-age" id="intro-age" placeholder="Current Age">
+
+                    <label for="intro-retireAge">When Do You Want To Retire? </label>
+                    <input type="number" name="intro-retireAge" id="intro-retireAge" placeholder="Retirement Age">
+
+                    <label for="intro-targetIncome">What Is Your Target Retirement Income? 
+                        <span id="intro-subdue">(In Today's Dollars)</span>
+                    </label>
+                    <input type="number" name="intro-targetIncome" id="intro-targetIncome" placeholder="Annual Retirement Income"> 
+
+                    <label for="intro-principal">How Much Have You Already Saved? <span id="intro-subdue">(Optional)</span></label>
+                    <input type="number" name="intro-principal" id="intro-principal" placeholder="Current Savings & Investments">
+
+                    <label for="intro-estate">Do You Want To Leave An Estate? <span id="intro-subdue">(Optional)</span></label>
+                    <input type="number" name="intro-estate" id="intro-estate" placeholder="For The Kids">
+
+                    <input type="submit" class="cardButton" name="intro-submit" id="intro-submit" value="Calculate">
                 </div>
+                </div>
+            </div>
+
+            <div class="newCard">
+                <div class="content">
+                    <h2>About</h2>
+                    <h3>text</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
+                </div>
+            </div>
+
+            <div class="newCard">
+                <div class="content">
+                    <h2>Login</h2>
+                    <h3>text</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
+                </div>
+            </div>
+
+            <div class="newCard">
+                <div class="content">
+                    <h2>Register</h2>
+                    <h3>text</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
+                </div>
+            </div>
+
             </div>
         </div>
     </div>
@@ -85,6 +111,9 @@
                     <input type="submit" class="form-control btn btn-success" name="intro-register" id="intro-register" value="Start Now">            
                 </div>
             </div> -->
+    
+
+
 
     <!-- <div id="demo" class="mt-5">
         <h4>See It In Action</h4>

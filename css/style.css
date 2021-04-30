@@ -42,20 +42,21 @@ body {
 
 .container {
   position: absolute;
-  top: 5vh;
+  top: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 100%;
   flex-wrap: wrap;
+  overflow: auto;
+  height: 92vh;
   z-index: 1;
 }
 
 .container .newCard {
   position: relative;
   width: 95%;
-  height: 100%;
-  margin-bottom: 30px;
+  margin: 30px 0;
   box-shadow: -20px -20px 60px rgba(0,0,0,0.5);
   border-radius: 15px;
   background: rgba(255,255,255,0.15);
@@ -66,10 +67,6 @@ body {
   border-right: 1px solid rgba(255,255,255,0.5);
   border-bottom: 1px solid rgba(255,255,255,0.5);
   backdrop-filter: blur(8px);
-}
-
-.container .newCard:first-child {
-  margin-top: 64px;
 }
 
 .container .newCard .content {
@@ -94,22 +91,39 @@ body {
   font-size: 1em;
   color: #fff;
   font-weight: 300;
+  margin: 10px auto 5px auto;
 }
 
 .container .newCard .content .cardButton {
   position: relative;
-  display: inline-block;
-  padding: 8px 20px;
-  margin-top: 15px;
-  background: #fff;
+  display: block;
+  padding: 4px 20px;
+  margin: 15px auto 0 auto;
+  background: rgba(108, 255, 160, 0.726);
   color: #000;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-  border-right: 2px solid rgba(0, 0, 0, 0.3);
-  border-left: 1px solid rgba(0,0,0,0.6);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  border-right: 2px solid rgba(255,255,255,0.3);
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-top: none;
+  max-width: 300px;
+}
+
+.container .newCard .content .cardButton:hover {
+  background: rgba(99, 250, 152, 0.836);
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  border-right: 2px solid rgba(255,255,255,0.4);
+  border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+.container .newCard .content .cardButton:active {
+  background: rgb(48, 226, 110);
+  border-bottom: 2px solid rgba(8, 129, 51, 0.555);
+  border-right: 2px solid rgba(8, 129, 51, 0.555);
+  border-left: 1px solid rgba(8, 129, 51, 0.3);
 }
 
 .container .newCard .content a {
@@ -126,6 +140,7 @@ nav {
   align-items: center;
   height: 8vh;
   width: 100%;
+  /* padding: 10px; */
   background: rgba(22, 29, 16, 0.5);
   z-index: 2;
   
@@ -179,9 +194,26 @@ nav {
   transition: all 0.5s ease;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (min-width:900px) {
+  .nav-links a {
+    letter-spacing: 3px;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width:721px) {
   .nav-links {
       width: 60%;
+  }
+
+  .nav-links a {
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .container .newCard {
+    width: 680px;
   }
 }
 
@@ -263,8 +295,8 @@ nav {
   position: absolute;
   display: block;
   list-style: none;
-  border-radius: 70%;
-  bottom: -150px;
+  /* border-radius: 50%; */
+  bottom: -250px;
 }
 
 .circle li.one {
@@ -281,7 +313,7 @@ nav {
   width: 20vw;
   height: 20vw;
   animation-delay: 4s;
-  animation: animate 25s linear infinite;
+  animation: animate2 25s linear infinite;
 }
 
 .circle li.three {
@@ -296,10 +328,10 @@ nav {
 .circle li.four {
   background: linear-gradient(rgba(217, 120, 255, 0.5),rgba(28, 255, 104, 0.5));
   left: 70%;
-  width: 35vw;
-  height: 35vw;
+  width: 30vw;
+  height: 30vw;
   animation-delay: 6s;
-  animation: animate 30s linear infinite;
+  animation: animate2 30s linear infinite;
 }
 
 @keyframes animate {
@@ -312,6 +344,47 @@ nav {
   }
 }
 
+@keyframes animate2 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-1500px) rotate(-360deg);
+  }
+}
+
+/* Form Inputs */
+
+.newCard input[type="text"], input[type="number"] {
+  background: rgba(22, 29, 16, 0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.5);
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-left: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  color: rgba(255,255,255,0.8);
+  display: block;
+  margin: 0 auto;
+}
+
+.newCard input[type="number"] {
+  width: 300px;
+}
+
+.newCard input[type="text"]::placeholder, input[type="number"]::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.newCard input[type="text"]:focus, input[type="number"]:focus {
+  background: rgba(22, 29, 16, 0.8);
+  border-right: 1px solid rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.1);
+  color: rgba(255,255,255,0.9);
+  outline: none !important;
+}
 
 /* li { list-style-type: none; } */
 
