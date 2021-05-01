@@ -20,3 +20,7 @@ const navSlide = () => {
 };
 
 navSlide();
+
+document.getElementById('scrollIntroForm').addEventListener('click',()=>{
+    document.getElementById('introForm').scrollIntoView();
+});

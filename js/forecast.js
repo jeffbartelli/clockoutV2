@@ -21,12 +21,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    $("#intro-submit").click(function(){
+
+        $("#intro-form").animate({
+            width: "toggle"
+        });
+
+        if ($('#intro-submit').val() == "Calculate") {
+            $('#intro-form-result').toggle();
+            $('#intro-collapse').height('500px');
+            $('#intro-submit').val("Update");
+        } else {
+            $('#intro-form-result').toggle();
+            $('#intro-collapse').height('403px');
+            $('#intro-submit').val("Submit");
+        }
+    });
+
     document.getElementById('intro-submit').addEventListener('click', () => {
-        let div1 = document.getElementById('intro-form');
-        let div2 = document.getElementById('intro-results');
-        div2.style.width = div1.style.width;
-        console.log(div1.offsetWidth);
-        console.log(div2.offsetWidth);
+        
+
+        
+        // let div1 = document.getElementById('intro-form');
+        // let div2 = document.getElementById('intro-results');
+        // div2.style.width = div1.style.width;
+        // console.log(div1.offsetWidth);
+        // console.log(div2.offsetWidth);
         // const slideRight = elem => elem.style.width = `${elem.scrollWidth}px`;
         // slideRight(document.getElementById("intro-results"));
         

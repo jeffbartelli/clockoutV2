@@ -1,6 +1,10 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -62,6 +66,7 @@ body {
   background: rgba(255,255,255,0.15);
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-right: 1px solid rgba(255,255,255,0.5);
@@ -140,7 +145,7 @@ nav {
   align-items: center;
   height: 8vh;
   width: 100%;
-  /* padding: 10px; */
+  padding: 10px;
   background: rgba(22, 29, 16, 0.5);
   z-index: 2;
   
@@ -272,6 +277,23 @@ nav {
   .toggle .line3 {
       transform: rotate(45deg) translate(-5px,-6px);
   }
+}
+
+#intro-form {
+  overflow: hidden;
+  width: 95%;
+}
+
+#intro-form-result {
+  overflow: hidden;
+  display: none;
+}
+
+#intro-collapse {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 403px;
 }
 
 /* Background Formatting */
