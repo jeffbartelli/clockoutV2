@@ -11,9 +11,10 @@
         <?php if (isset($_SESSION['username'])): ?>
             <li>Welcome, <?php echo ucwords($_SESSION['username']); ?></li>
         <?php endif; ?>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Planner</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#introForm">Calculator</a></li>
+        <li><a href="#planner-tool">Planner</a></li>
+        <li><a href="#about">About</a></li>
         <?php if (isset($_SESSION['username'])): ?>
             <li><a href="logout.php">Logout</a></li>
         <?php else: ?>

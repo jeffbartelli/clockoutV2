@@ -279,21 +279,52 @@ nav {
   }
 }
 
+#intro-collapse {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
 #intro-form {
   overflow: hidden;
   width: 95%;
+  flex: none;
 }
 
 #intro-form-result {
   overflow: hidden;
   display: none;
+  width: 95%;
+  flex: none;
 }
 
-#intro-collapse {
-  overflow: hidden;
+.intro-form-result h2 {
+  font-size: 2.7em;
+  color: rgb(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+.intro-form-result h3 {
+  font-size: 1.6em;
+  color: #fff;
+  z-index: 1;
+}
+
+.intro-btn-group {
   display: flex;
-  flex-direction: row;
-  height: 403px;
+  justify-content: center;
+}
+
+.intro-btn-group .cardButton:first-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: none;
+
+}
+
+.intro-btn-group .cardButton:last-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 /* Background Formatting */
@@ -388,6 +419,7 @@ nav {
   color: rgba(255,255,255,0.8);
   display: block;
   margin: 0 auto;
+  text-align: center;
 }
 
 .newCard input[type="number"] {

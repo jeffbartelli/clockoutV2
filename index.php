@@ -18,16 +18,17 @@
             <li class="three"></li>
             <li class="four"></li>
         </ul>
+
         <div class="container">
             <div class="cardPack">
             
-            <div class="newCard">
+            <div class="newCard" id="home">
                 <div class="content">
                     <h2>Welcome to Clockout</h2>
                     <h3>The web's best retirement toolbox</h3>
                     <p>Clockout provides a complete toolset for planning for your retirement. Start with the basic retirement calculator below to determine how much money you will need to save to retire by your target retirement date. On click, the screen should scroll to the next card.</p>
                     <a href="https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form" target="_blank">Password reset</a>
-                    <a href="#" class="cardButton" id="scrollIntroForm">Get Started</a>
+                    <a href="#introForm" class="cardButton">Get Started</a>
                 </div>
             </div>
 
@@ -35,12 +36,10 @@
                 <div class="content">
                     <h2>Retirement Calculator</h2>
                     <h3>When Can You Retire?</h3>
-                    <!-- <div style="height: 48px;">
-                        <span id="intro-retireAgeWarning" style="visibility: hidden;" class="alert alert-danger">Retirement Age Must Be Greater Than Your Current Age</span>
-                    </div> -->
                     <div id="intro-collapse">
                         <div id="intro-form">
-                            <p>Explanation for why and how to use this tool.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellat recusandae corrupti odit voluptatibus voluptas aliquid eaque ullam consectetur corporis nihil accusamus reprehenderit qui, quia obcaecati quos tempora suscipit nostrum ducimus minima, mollitia nesciunt commodi repudiandae debitis! Veritatis quo quia sunt. Velit quo magnam aliquam saepe dolore laudantium sed, id eaque dicta commodi, vitae laborum non quam cupiditate nemo consequuntur iste nesciunt ipsam maiores dolorum suscipit quibusdam quos esse? Unde nulla soluta veniam! Hic, cumque?</p>
+                            <div id="form-container">
                             <div>
                                 <label for="intro-sex">Gender:</label>
                                 <input class="" type="radio" name="intro-sex" id="intro-sex-male" value="male">
@@ -64,6 +63,7 @@
 
                             <label for="intro-estate">Do You Want To Leave An Estate? <span id="intro-subdue">(Optional)</span></label>
                             <input type="number" name="intro-estate" id="intro-estate" placeholder="For The Kids">
+                            </div>
                         </div>
                         <div id="intro-form-result">
                             <h3>To retire at</h3> 
@@ -74,7 +74,10 @@
                             <h2 id="intro-results-monthlySave">$0,000</h2> 
                             <h3>every month until retirement.</h3>
                             <p id="intro-results-hook">With Social Security, pensions, and other accounts, you may not even need to save that. Clockout can help you sort out the specifics, so you can retire earlier than you thought.</p>
-                            <input type="submit" class="cardButton" name="intro-register" id="intro-register" value="Start Now">            
+                            <div class="intro-btn-group">
+                                <a href="#register" class="cardButton">Register</a>
+                                <a href="#planner-tool" class="cardButton">Start Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -84,7 +87,15 @@
                 </div>
             </div>
 
-            <div class="newCard">
+            <div class="newCard" id="planner-tool">
+                <div class="content">
+                    <h2>Retirement Planner</h2>
+                    <h3>text</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
+                </div>
+            </div>
+
+            <div class="newCard" id="about">
                 <div class="content">
                     <h2>About</h2>
                     <h3>text</h3>

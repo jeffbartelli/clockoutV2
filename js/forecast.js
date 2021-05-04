@@ -15,25 +15,41 @@ document.addEventListener('DOMContentLoaded', () => {
             retireAgeField.placeholder = "Must Be Greater Than Current Age";
         } else {
             // document.getElementById('intro-retireAgeWarning').style.visibility = "hidden";
-            retireAgeField.style.backgroundColor = 'white';
-            retireAgeField.style.borderColor = "#ced4da";
-            retireAgeField.style.color = "#495057";
+            retireAgeField.style.backgroundColor = "rgba(22, 29, 16, 0.5)";
+            retireAgeField.style.color = "rgba(255,255,255,0.8)";
+            retireAgeField.style.borderTop = "1px solid rgba(0,0,0,0.2)";
+            retireAgeField.style.borderBottom = "1px solid rgba(255,255,255,0.5)";
+            retireAgeField.style.borderLeft = "1px solid rgba(0,0,0,0.2)";
+            retireAgeField.style.borderRight = "1px solid rgba(255,255,255,0.5)";
+            retireAgeField.placeholder = "Retirement Age";
         }
     });
 
-    $("#intro-submit").click(function(){
+    //Form Validation with the formvalidation.io library. This will be useful across the site!
+
+    $("#intro-submit").click(function(e){
+        e.preventDefault();
+        let height = $('#intro-form-result').outerHeight();
+        $('#intro-form').outerHeight(height);
 
         $("#intro-form").animate({
+            height: height + "px",
             width: "toggle"
         });
+        // $("#intro-form-result").animate({width: "toggle"});
 
         if ($('#intro-submit').val() == "Calculate") {
-            $('#intro-form-result').toggle();
-            $('#intro-collapse').height('500px');
+            $('#intro-form-result').outerHeight(height);
+            // $('#intro-form-result').toggle();
+            $("#intro-form-result").animate({width: "toggle"});
             $('#intro-submit').val("Update");
+        } else if ($('#intro-submit').val() == "Submit") {
+            $('#intro-submit').val("Update");
+            // $('#intro-form-result').toggle();
+            $("#intro-form-result").animate({width: "toggle"});
         } else {
-            $('#intro-form-result').toggle();
-            $('#intro-collapse').height('403px');
+            // $('#intro-form-result').toggle();
+            $("#intro-form-result").animate({width: "toggle"});
             $('#intro-submit').val("Submit");
         }
     });

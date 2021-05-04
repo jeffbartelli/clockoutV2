@@ -21,6 +21,16 @@ const navSlide = () => {
 
 navSlide();
 
-document.getElementById('scrollIntroForm').addEventListener('click',()=>{
-    document.getElementById('introForm').scrollIntoView();
-});
+// document.getElementById('scrollIntroForm').addEventListener('click',()=>{
+//     document.getElementById('introForm').scrollIntoView();
+// });
+
+
+// $("#scrollIntroForm").click(function(e) {
+//     console.log('trigger');
+//     e.preventDefault();
+//     $('body, html').animate({
+//         scrollTop: $("#introForm").offset().top
+//     }, 1000);
+//     console.log('trigger too');
+// });
