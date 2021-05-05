@@ -18,8 +18,21 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
     });
 };
-
 navSlide();
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('nav-login').addEventListener('click',function(e) {
+        $('#login').show("slow","swing");
+    });
+
+    document.getElementById('nav-register').addEventListener('click',function(e) {
+        // $('#login').hide("slow","swing");
+        $('#register').show("slow",
+        "swing");
+    });
+});
+
+
 
 // document.getElementById('scrollIntroForm').addEventListener('click',()=>{
 //     document.getElementById('introForm').scrollIntoView();

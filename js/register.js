@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Replace these CSS changes with actual CSS and use this function to apply a class to activate them
     function reject (param, action, message) {
         let name = param;
         if (action == 'add') {

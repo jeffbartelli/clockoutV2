@@ -38,7 +38,7 @@
                     <h3>When Can You Retire?</h3>
                     <div id="intro-collapse">
                         <div id="intro-form">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellat recusandae corrupti odit voluptatibus voluptas aliquid eaque ullam consectetur corporis nihil accusamus reprehenderit qui, quia obcaecati quos tempora suscipit nostrum ducimus minima, mollitia nesciunt commodi repudiandae debitis! Veritatis quo quia sunt. Velit quo magnam aliquam saepe dolore laudantium sed, id eaque dicta commodi, vitae laborum non quam cupiditate nemo consequuntur iste nesciunt ipsam maiores dolorum suscipit quibusdam quos esse? Unde nulla soluta veniam! Hic, cumque?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellat recusandae corrupti odit voluptatibus voluptas aliquid eaque ullam consectetur corporis nihil accusamus reprehenderit qui, quia obcaecati quos tempora suscipit nostrum ducimus minima,  </p>
                             <div id="form-container">
                             <div>
                                 <label for="intro-sex">Gender:</label>
@@ -103,19 +103,19 @@
                 </div>
             </div>
 
-            <div class="newCard">
+            <div class="newCard" id="login">
                 <div class="content">
                     <h2>Login</h2>
                     <h3>text</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
+                    <?php //include('login.php'); ?>
                 </div>
             </div>
 
-            <div class="newCard">
+            <div class="newCard" id="register">
                 <div class="content">
                     <h2>Register</h2>
                     <h3>text</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
+                    <?php //include('register.php'); ?>
                 </div>
             </div>
 
