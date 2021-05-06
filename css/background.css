@@ -1,0 +1,79 @@
+/* Background Formatting */
+
+#background {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .circle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .circle li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    /* border-radius: 50%; */
+    bottom: -350px;
+  }
+  
+  .circle li.one {
+    background: linear-gradient(rgb(128, 206, 141, 0.5),rgb(0, 188, 212, 0.5));
+    left: 2%;
+    width: 15vw;
+    height: 15vw;
+    animation: animate 20s linear infinite;
+  }
+  
+  .circle li.two {
+    background: linear-gradient(rgb(111, 95, 255, 0.5),rgb(255, 144, 70, 0.5));
+    left: 25%;
+    width: 20vw;
+    height: 20vw;
+    animation-delay: 4s;
+    animation: animate2 25s linear infinite;
+  }
+  
+  .circle li.three {
+    background: linear-gradient(rgba(142, 253, 15, 0.5),rgba(255, 131, 203, 0.5),rgb(252, 216, 55, 0.5));
+    left: 50%;
+    width: 16vw;
+    height: 16vw;
+    animation-delay: 2s;
+    animation: animate 18s linear infinite;
+  }
+  
+  .circle li.four {
+    background: linear-gradient(rgba(217, 120, 255, 0.5),rgba(28, 255, 104, 0.5));
+    left: 70%;
+    width: 30vw;
+    height: 30vw;
+    animation-delay: 6s;
+    animation: animate2 30s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+  
+    100% {
+      transform: translateY(-1500px) rotate(720deg);
+    }
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+  
+    100% {
+      transform: translateY(-1500px) rotate(-360deg);
+    }
+  }

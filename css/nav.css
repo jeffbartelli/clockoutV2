@@ -1,0 +1,160 @@
+nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    padding: 10px;
+    background: rgba(22, 29, 16, 0.5);
+    z-index: 10;  
+}
+
+.navBar {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    color: rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.nav-animate::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: width 0.3s;
+}
+
+.nav-animate:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(231, 231, 231);
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+@media screen and (min-width:900px) {
+    .nav-links a {
+        letter-spacing: 3px;
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width:721px) {
+    .nav-links {
+        width: 60%;
+    }
+
+    .nav-links a {
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:720px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgba(224, 224, 224, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 3;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-animate::after {
+        height: 4px;
+    }
+
+    /* moves agent name to top of nav on mobile */
+    .nav-logout {
+        order: 1;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    @keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+}
+
