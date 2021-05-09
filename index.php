@@ -75,9 +75,9 @@
                         <h3>To hit that target you must save</h3> 
                         <h2 id="intro-results-monthlySave">$0,000</h2> 
                         <h3>every month until retirement.</h3>
-                        <p id="intro-results-hook">ALTER THE FUNCTION TO INCLUDE CAPITAL GAINS TAX? PAYROLL TAX? REDUCE THE GROWTHRATE TO ACCOUNT FOR TAXES? CHECK HEIGHT OF THIS DIV WHEN MOBILE: IT'S CUTTING OFF A BUTTON. FIX THE REGISTER BUTTON BELOW With Social Security, pensions, and other accounts, you may not even need to save that. Clockout can help you sort out the specifics, so you can retire earlier than you thought.</p>
+                        <p id="intro-results-hook">ALTER THE FUNCTION TO INCLUDE CAPITAL GAINS TAX? PAYROLL TAX? REDUCE THE GROWTHRATE TO ACCOUNT FOR TAXES? CHECK HEIGHT OF THIS DIV WHEN MOBILE: IT'S CUTTING OFF A BUTTON. With Social Security, pensions, and other accounts, you may not even need to save that. Clockout can help you sort out the specifics, so you can retire earlier than you thought.</p>
                         <div class="intro-btn-group">
-                            <a href="#register" class="cardButton register">Register</a>
+                            <a href="register.php" class="cardButton register">Register</a>
                             <a href="#planner-tool" class="cardButton">Start Now</a>
                         </div>
                     </div>
@@ -103,27 +103,6 @@
                 <h3>text</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
             </div>
-        </div>
-
-        <div id="login">
-        <div class="newCard">
-            <div class="content">
-                <h2>Login</h2>
-                <h3>text</h3>
-                <P>NEED TO FIX THE PHP AND JS FOR THE CONNECTIONS TO THE DB. ALSO NEED TO TEST UI WHEN SOMEBODY IS LOGGED IN. AND SHOULD CREATE A PROFILE PAGE?</P>
-                <?php //include('login.php'); ?>
-            </div>
-        </div>
-        </div>
-
-        <div id="register">
-        <div class="newCard">
-            <div class="content">
-                <h2>Register</h2>
-                <h3>text</h3>
-                <?php //include('register.php'); ?>
-            </div>
-        </div>
         </div>
     </div>   
 

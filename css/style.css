@@ -128,10 +128,6 @@ body {
   color: rgb(226, 104, 5);
 }
 
-#login, #register {
-  display: none;
-}
-
 
 
 #intro-collapse {

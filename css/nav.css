@@ -28,6 +28,11 @@ nav {
     font-size: 20px;
 }
 
+.logo a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -44,6 +49,13 @@ nav {
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 2em;
+}
+
+.nav-links span {
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .nav-animate::after {

@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let passwordConfCheck = false;
 
     function verify () {
-        console.log('triggered');
         if (usernameCheck == true && emailCheck == true && passwordCheck == true && passwordConfCheck == true) {
             document.getElementById('signupBtn').disabled = false;
         }

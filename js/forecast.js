@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let retireAge = retireAgeField.value;
         if (retireAge <= age) {
             retireAgeField.value = '';
-            // document.getElementById('intro-retireAgeWarning').style.visibility = "visible";
             retireAgeField.style.backgroundColor = 'rgba(29, 3, 3, 0.918)';
             retireAgeField.style.borderColor = "rgba(224, 1, 1, 0.856)";
             retireAgeField.style.color = "rgba(224, 1, 1, 0.856)";
             retireAgeField.placeholder = "Must Be Greater Than Current Age";
         } else {
-            // document.getElementById('intro-retireAgeWarning').style.visibility = "hidden";
             retireAgeField.style.backgroundColor = "rgba(22, 29, 16, 0.5)";
             retireAgeField.style.color = "rgba(255,255,255,0.8)";
             retireAgeField.style.borderTop = "1px solid rgba(0,0,0,0.2)";
