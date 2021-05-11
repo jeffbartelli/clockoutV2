@@ -123,6 +123,16 @@ body {
   border-left: 1px solid rgba(255,255,255,0.1);
 }
 
+#container .newCard .content .cardButton:disabled {
+  background: rgba(22, 29, 16, 0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.5);
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-left: 1px solid rgba(0,0,0,0.2);
+  color: rgba(255, 255, 255, 0.575);
+
+}
+
 #container .newCard .content a {
   /* color: #52d881; */
   color: rgb(226, 104, 5);
@@ -134,6 +144,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 #intro-form {

@@ -44,16 +44,16 @@
 
                 <form action="register.php" method="post">
                     <label>Username <span id="usernameError"></span></label>
-                    <input type="text" name="username" id="username" class="form-control form-control-lg mb-2" value="<?php echo $username; ?>">
+                    <input type="text" name="username" id="username" value="<?php echo $username; ?>">
 
                     <label>Email <span id="emailError"></span></label>
-                    <input type="text" name="email" id="email" class="form-control form-control-lg mb-2" value="<?php echo $email; ?>">
+                    <input type="text" name="email" id="email" value="<?php echo $email; ?>">
 
                     <label>Password</label>
-                    <input type="password" id="password" name="password" class="form-control form-control-lg mb-2">
+                    <input type="password" id="password" name="password">
                     <label>Confirm Password <span id="passwordConfError"></span></label>
-                    <input type="password" id="passwordConf" name="passwordConf" class="form-control form-control-lg">
-                    <button type="submit" id="signupBtn" name="signup-btn" class="btn btn-lg btn-block my-2" disabled>Sign Up</button>
+                    <input type="password" id="passwordConf" name="passwordConf">
+                    <button type="submit" id="signupBtn" name="signup-btn" class="cardButton" disabled>Sign Up</button>
                 </form>
                 <p>Already have an account? <a href="login.php">Login</a></p>
             </div>

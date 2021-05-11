@@ -111,5 +111,6 @@
     <script src="js/nav.js"></script>
     <script type="module" src="js/data.js"></script>
     <script type="module" src="js/forecast.js"></script>
+    <script src='validator.js'></script>
 </body>
 </html>
