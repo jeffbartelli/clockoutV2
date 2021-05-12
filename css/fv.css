@@ -1,6 +1,6 @@
 /* Tooltips helpers */
-.field .tooltip{ float:left; top:2px; left:7px; position:relative; z-index:2; }
-.field .tooltip:hover{ z-index:3; }
+.field .tooltip{ float:left; top:2px; left:7px; position:relative; z-index:20; }
+.field .tooltip:hover{ z-index:21; }
    .field .tooltip > span{ display:inline-block; width:15px; height:15px; line-height:15px; font-size:0.9em; font-weight:bold; text-align:center; color:#FFF; cursor:help; background-color:#00AEEF; position:relative; border-radius:10px; }
     .field .tooltip .content{ opacity:0; width:200px; background-color:#333; color:#FFF; font-size:0.9em; position:absolute; top:0; left:20px; padding:8px; border-radius:6px; pointer-events:none; transition:0.2s cubic-bezier(0.1, 0.1, 0.25, 2); -webkit-transition:0.3s cubic-bezier(0.1, 0.2, 0.5, 2.2); -moz-transition:0.3s cubic-bezier(0.1, 0.2, 0.5, 2.2); }
         .field .tooltip p{ padding:0; }
@@ -28,17 +28,17 @@
     75%{ -webkit-transform:translateX(6px); }
 }
 
-form fieldset{ clear:both; margin:0 0 10px 0; }
+/* form fieldset{ clear:both; margin:0 0 10px 0; }
 form .field{ padding:5px 0; position:relative; height:2em; }
-form .field.fields{ height:auto; }
-	.field label, .field .label{  cursor:pointer; }
+form .field.fields{ height:auto; } */
+	/* .field label, .field .label{  cursor:pointer; }
 		.field label > span:first-child, .field .label{ float:left; width:160px; text-transform:capitalize; line-height:2em; }
 	.field input, .field textarea{ float:left; padding:3px 4px; width:210px; -webkit-transition:0.2s; -moz-transition:0.2s; transition:0.2s; }
 	.field input[type=checkbox]{ width:auto; }
 
-	.label ~ label{ vertical-align:middle; margin:0.3em 1.2em 0 0; }
+	.label ~ label{ vertical-align:middle; margin:0.3em 1.2em 0 0; } */
 
-	.field input.short{ width:90px; }
+	/* .field input.short{ width:90px; }
 	.field input:focus:not([type="checkbox"]), .field textarea:focus{ box-shadow:0 0 4px #00AEEF; border:1px solid #00AEEF; }
 	.field textarea{  }
 	.field select{ float:left; width:220px; padding:2px 0; margin:0; border:1px solid #CCC; text-transform:capitalize; }
@@ -49,7 +49,7 @@ form .field.fields{ height:auto; }
 	.field.multi .input{ float:left; }
 		.field.multi input{ float:left; margin-right:5px; width:35px; text-align:center; }
 		form .field.multi input:nth-last-child(-n+2){ margin:0; }
-	.field.fields input{ border-top:5px solid #E1E1E1; margin:0 0 0 160px; }
+	.field.fields input{ border-top:5px solid #E1E1E1; margin:0 0 0 160px; } */
 
 	.bad input,
 	.bad select,

@@ -74,7 +74,9 @@
             time            : 'invalid time',
             password_repeat : 'passwords do not match',
             no_match        : 'no match',
-            complete        : 'input is not complete'
+            complete        : 'input is not complete',
+            username        : 'username is not the right length',
+            password        : 'please enter a password'
         },
 
         // default settings
@@ -123,7 +125,6 @@
             },
 
             email : function(field, data){
-                console.log('email test')
                 var i, emails = data.value.trim().split(' ')
 
                 if( !field.multiple && emails.length > 1 )
@@ -613,3 +614,11 @@
 
     return FormValidator;
 }));
+
+// Form Field Event Listeners
+
+var validator = new FormValidator();
+
+document.forms[0].addEventListener('blur', function(e){
+    validator.checkField(e.target)
+}, true);
