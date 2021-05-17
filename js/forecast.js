@@ -2,31 +2,96 @@ import { life, growthRate, dollarFormat } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    let genderCheck = false;
+    let currentAgeCheck = false;
+    let retireAgeCheck = false;
+    let incomeCheck = false;
+    localStorage.setItem("intro-complete","false");
+
+    function verify () {
+        if (genderCheck == true && currentAgeCheck == true && retireAgeCheck == true && incomeCheck == true) {
+            document.getElementById('intro-submit').disabled = false;
+        }
+    }
+
+    document.querySelectorAll('input[name="intro-sex"]').forEach((elem) => {
+        elem.addEventListener("change", function(event) {
+          genderCheck = true;
+          verify();
+        });
+    });
+
+    document.getElementById('intro-age').addEventListener('keyup', function(e) {
+        let invalidChars = ["-","+","e",];
+        if (invalidChars.includes(e.key)) {
+            this.value = '';
+            this.classList.add('entryError');
+            this.placeholder = 'Must be a number';
+        } else {
+            this.classList.remove('entryError');
+        }
+    })
+    
+    document.getElementById('intro-age').addEventListener('blur', function() {
+        if (Number.isInteger(+this.value)) {
+            currentAgeCheck = true;
+            this.classList.remove('entryError');
+            verify(); 
+        } else {
+            this.value = '';
+            this.classList.add('entryError');
+            this.placeholder = 'Must be a number';
+        }
+    });
+
     document.getElementById('intro-retireAge').addEventListener('blur', () => {
         let age = document.getElementById('intro-age').value;
         let retireAgeField = document.getElementById('intro-retireAge');
         let retireAge = retireAgeField.value;
         if (retireAge <= age) {
             retireAgeField.value = '';
-            retireAgeField.style.backgroundColor = 'rgba(29, 3, 3, 0.918)';
-            retireAgeField.style.borderColor = "rgba(224, 1, 1, 0.856)";
-            retireAgeField.style.color = "rgba(224, 1, 1, 0.856)";
+            retireAgeField.classList.add('entryError');
             retireAgeField.placeholder = "Must Be Greater Than Current Age";
         } else {
-            retireAgeField.style.backgroundColor = "rgba(22, 29, 16, 0.5)";
-            retireAgeField.style.color = "rgba(255,255,255,0.8)";
-            retireAgeField.style.borderTop = "1px solid rgba(0,0,0,0.2)";
-            retireAgeField.style.borderBottom = "1px solid rgba(255,255,255,0.5)";
-            retireAgeField.style.borderLeft = "1px solid rgba(0,0,0,0.2)";
-            retireAgeField.style.borderRight = "1px solid rgba(255,255,255,0.5)";
-            retireAgeField.placeholder = "Retirement Age";
+            retireAgeField.classList.remove('entryError');
+            retireAgeField.placeholder = "";
+            retireAgeCheck = true;
+            verify();
         }
     });
 
-    //Form Validation with the formvalidation.io library. This will be useful across the site!
+    document.getElementById('intro-targetIncome').addEventListener('keyup', function(e) {
+        let invalidChars = ["-","+","e",];
+        if (invalidChars.includes(e.key)) {
+            this.value = '';
+            this.classList.add('entryError');
+            this.placeholder = 'Must be a number';
+        } else {
+            this.classList.remove('entryError');
+        }
+    })
+    
+    document.getElementById('intro-targetIncome').addEventListener('blur', function() {
+        if (Number.isInteger(+this.value)) {
+            incomeCheck = true;
+            this.classList.remove('entryError');
+            verify(); 
+        } else {
+            this.value = '';
+            this.classList.add('entryError');
+            this.placeholder = 'Must be a number';
+        }
+    });
 
-    $("#intro-submit").click(function(e){
+    document.getElementById('intro-submit').addEventListener('click', function(e) {
         e.preventDefault();
+
+        // Insert code to send first response to db
+        // Create a local storage variable that if true prevents the ajax call from running.
+        
+        localStorage.setItem("intro-complete","true");
+        
+        // Some code to try and make both the form and results divs the same height
         let height = $('#intro-form-result').outerHeight();
         $('#intro-form').outerHeight(height);
 
@@ -34,35 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
             height: height + "px",
             width: "toggle"
         });
-        // $("#intro-form-result").animate({width: "toggle"});
 
         if ($('#intro-submit').val() == "Calculate") {
             $('#intro-form-result').outerHeight(height);
-            // $('#intro-form-result').toggle();
             $("#intro-form-result").animate({width: "toggle"});
             $('#intro-submit').val("Update");
         } else if ($('#intro-submit').val() == "Submit") {
             $('#intro-submit').val("Update");
-            // $('#intro-form-result').toggle();
             $("#intro-form-result").animate({width: "toggle"});
         } else {
-            // $('#intro-form-result').toggle();
             $("#intro-form-result").animate({width: "toggle"});
             $('#intro-submit').val("Submit");
         }
-    });
-
-    document.getElementById('intro-submit').addEventListener('click', () => {
-        
-
-        
-        // let div1 = document.getElementById('intro-form');
-        // let div2 = document.getElementById('intro-results');
-        // div2.style.width = div1.style.width;
-        // console.log(div1.offsetWidth);
-        // console.log(div2.offsetWidth);
-        // const slideRight = elem => elem.style.width = `${elem.scrollWidth}px`;
-        // slideRight(document.getElementById("intro-results"));
         
         
         let sex = document.querySelector('input[name="intro-sex"]:checked').value;

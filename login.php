@@ -14,6 +14,7 @@ include 'controllers/authController.php';
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/access.css">
   <title>ClockOut 2021 - Login</title>
 </head>
 <body>
@@ -34,7 +35,7 @@ include 'controllers/authController.php';
         <h2>Login</h2>
           <!-- PHP if statement for displaying error messages -->
           <?php if (count($errors) > 0): ?>
-            <div class="alert alert-danger">
+            <div class="accessAlerts">
                 <?php foreach ($errors as $error): ?>
                 <li>
                 <?php echo $error; ?>
@@ -43,12 +44,12 @@ include 'controllers/authController.php';
             </div>
           <?php endif;?>
           <!-- Login Form -->
-          <form action="login.php" method="post">
+          <form action="login.php" method="post" autocomplete="off">
               <label>Username or Email</label>
-              <input type="text" name="username" class="form-control form-control-lg mb-2" value="<?php echo $username; ?>">
+              <input type="text" name="username" id="loginUsername" autofocus>
               <label>Password</label>
-              <input type="password" name="password" class="form-control form-control-lg mb-2">
-              <button type="submit" name="login-btn" class="btn btn-lg my-2 btn-block">Login</button>
+              <input type="password" name="password" id="loginPassword">
+              <button type="submit" name="login-btn" id="loginBtn" class="cardButton" disabled>Login</button>
           </form>
           <p>Forgot your password? Reset it <a href="#">Here</a></p>
           <p>Don't yet have an account? <a href="register.php">Sign up</a></p>
@@ -56,6 +57,6 @@ include 'controllers/authController.php';
     </div>
   </div>
 
-  <script src="js/register.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html> 

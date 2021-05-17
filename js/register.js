@@ -11,21 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Replace these CSS changes with actual CSS and use this function to apply a class to activate them
     function reject (param, action, message) {
         let name = param;
         if (action == 'add') {
             document.getElementById(`${name}Error`).innerHTML = `${message}`;
-            document.getElementById(`${name}`).style.backgroundColor = "mistyrose";
-            document.getElementById(`${name}`).style.color = 'darkred';
-            document.getElementById(`${name}`).style.borderColor = 'firebrick';
-            document.getElementById(`${name}`).style.boxShadow = "0 0 8px mistyrose"; 
+            document.getElementById(`${name}`).classList.add("entryError");
         } else if (action == 'delete') {
             document.getElementById(`${name}Error`).innerHTML = '';
-            document.getElementById(`${name}`).style.backgroundColor = '';
-            document.getElementById(`${name}`).style.color = '';
-            document.getElementById(`${name}`).style.borderColor = '';
-            document.getElementById(`${name}`).style.boxShadow = ''; 
+            document.getElementById(`${name}`).classList.remove("entryError");
         }
     }
 

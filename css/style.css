@@ -172,6 +172,8 @@ body {
   z-index: 1;
 }
 
+
+
 /* .intro-btn-group {
   display: flex;
   justify-content: center;
@@ -215,4 +217,33 @@ body {
   border-left: 1px solid rgba(0,0,0,0.1);
   color: rgba(255,255,255,0.9);
   outline: none !important;
+}
+
+
+/* Styles for Form Validation */
+
+.entryError {
+  border: 1px solid rgba(255, 0, 0, 0.5) !important;
+  color: rgb(255, 0, 0) !important;
+}
+
+.accessAlerts {
+  position: relative;
+  display: block;
+  padding: 4px 20px;
+  margin: 15px auto 0 auto;
+  background: rgba(255, 255, 255, 0.137);
+  color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.5);
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: none;
+  text-align: left;
+}
+
+.accessAlerts li {
+  list-style-type: square;
 }

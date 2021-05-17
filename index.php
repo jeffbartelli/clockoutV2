@@ -49,24 +49,23 @@
                             <input class="" type="radio" name="intro-sex" id="intro-sex-female" value="female">
                             <label class="" for="intro-sex-female">Female</label>
                         </div>
-
                         
                         <label for="intro-age">How Old Are You?</label>
-                        <input type="number" name="intro-age" id="intro-age" placeholder="Current Age">
+                        <input type="number" name="intro-age" id="intro-age">
 
-                        <label for="intro-retireAge">When Do You Want To Retire? </label>
-                        <input type="number" name="intro-retireAge" id="intro-retireAge" placeholder="Retirement Age">
+                        <label for="intro-retireAge">At What Age Do You Want To Retire? </label>
+                        <input type="number" name="intro-retireAge" id="intro-retireAge">
 
                         <label for="intro-targetIncome">What Is Your Target Retirement Income? 
                             <span id="intro-subdue">(In Today's Dollars)</span>
                         </label>
-                        <input type="number" name="intro-targetIncome" id="intro-targetIncome" placeholder="Annual Retirement Income"> 
+                        <input type="number" name="intro-targetIncome" id="intro-targetIncome"> 
 
                         <label for="intro-principal">How Much Have You Already Saved? <span id="intro-subdue">(Optional)</span></label>
-                        <input type="number" name="intro-principal" id="intro-principal" placeholder="Current Savings & Investments">
+                        <input type="number" name="intro-principal" id="intro-principal">
 
                         <label for="intro-estate">Do You Want To Leave An Estate? <span id="intro-subdue">(Optional)</span></label>
-                        <input type="number" name="intro-estate" id="intro-estate" placeholder="For The Kids">
+                        <input type="number" name="intro-estate" id="intro-estate">
                         </div>
                     </div>
                     <div id="intro-form-result">
@@ -87,7 +86,7 @@
             </div>
 
             <div class="content">
-                <input type="submit" class="cardButton" name="intro-submit" id="intro-submit" value="Calculate">
+                <input type="submit" class="cardButton" name="intro-submit" id="intro-submit" value="Calculate" disabled>
             </div>
         </div>
 
@@ -113,6 +112,5 @@
     <script src="js/nav.js"></script>
     <script type="module" src="js/data.js"></script>
     <script type="module" src="js/forecast.js"></script>
-    <script src='validator.js'></script>
 </body>
 </html>
