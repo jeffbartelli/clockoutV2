@@ -1,3 +1,13 @@
+<?php
+
+require('connection.php');
+$time = time();
+$action = 'submit_form';
+$str = sprintf('%s_%s_%s', $action, $time, NONCE_SALT);
+$hash = hash('sha512', $str);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,6 +76,10 @@
 
                         <label for="intro-estate">Do You Want To Leave An Estate? <span id="intro-subdue">(Optional)</span></label>
                         <input type="number" name="intro-estate" id="intro-estate">
+
+                        <input type="hidden" name="timestamp" id="timestamp" value="<?php echo $time; ?>">
+                        <input type="hidden" name="form_action" id="form-action" value="<?php echo $action ?>">
+                        <input type="hidden" name="form_hash" id="form-hash" value="<?php echo $hash ?>">
                         </div>
                     </div>
                     <div id="intro-form-result">

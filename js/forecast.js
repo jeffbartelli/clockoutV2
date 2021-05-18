@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentAgeCheck = false;
     let retireAgeCheck = false;
     let incomeCheck = false;
-    localStorage.setItem("intro-complete","false");
+    localStorage.setItem("introComplete","false");
 
     function verify () {
         if (genderCheck == true && currentAgeCheck == true && retireAgeCheck == true && incomeCheck == true) {
@@ -86,11 +86,46 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('intro-submit').addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Insert code to send first response to db
-        // Create a local storage variable that if true prevents the ajax call from running.
-        
-        localStorage.setItem("intro-complete","true");
-        
+        let introResponse = {
+            "gender" : document.getElementById('intro-sex-male').checked ? "male" : "female",
+            "currentAge" : document.getElementById('intro-age').value,
+            "retireAge" : document.getElementById('intro-retireAge').value,
+            "retireIncome" : document.getElementById('intro-targetIncome').value,
+            "savings" : document.getElementById('intro-principal').value || 0,
+            "estate" : document.getElementById('intro-estate').value || 0,
+            "timestamp" : document.getElementById('timestamp').value,
+            "formAction" : document.getElementById('form-action').value,
+            "formHash" : document.getElementById('form-hash').value,
+        }
+        sessionStorage.setItem('intro-response', JSON.stringify(introResponse));
+
+        console.log('before ajax call');
+        console.log(localStorage.introComplete);
+        if (localStorage.introComplete === "false") {
+            console.log('introComplete = false');
+            $.ajax({
+                type: 'POST',
+                url: 'introResponse.php',
+                data: introResponse,
+                dataType: 'json',
+                encode: true,
+                success: function(data){
+                    alert(data);
+                },
+                error: function(xhr, status, error){
+                    console.log(xhr, status, error);
+                }
+            })
+            // .then((data) => {
+            //     if (data == true) {
+            //         localStorage.setItem("introComplete","true");
+            //     }
+            //     console.log(data);
+            //     console.log('mission accomplished');
+            // });
+            console.log('end of if');
+        }
+
         // Some code to try and make both the form and results divs the same height
         let height = $('#intro-form-result').outerHeight();
         $('#intro-form').outerHeight(height);
