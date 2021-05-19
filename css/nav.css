@@ -170,3 +170,30 @@ nav {
     }
 }
 
+/* Additional styling for login and register cards */
+
+#container .accessCard:first-child {
+    margin-top: 10vh !important;
+    min-height: unset !important;
+  }
+
+#container .accessCard {
+    padding: unset !important;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.15) !important;
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(8px);
+  }
+
+  @media screen and (min-width:721px) {
+    #container .accessCard {
+      max-width: 680px !important;
+    }
+  }

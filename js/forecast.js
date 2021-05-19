@@ -10,6 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem("introComplete","false");
     }
 
+    // If sessionStorage has intro form data then populate form values
+    if (sessionStorage.getItem('intro-response') !== null) {
+        let userInputs = JSON.parse(sessionStorage.getItem('intro-response'));
+
+        if (userInputs.gender === "male") {
+            document.getElementById('intro-sex-male').checked = true;
+        } else if (userInputs.gender === "female") {
+            document.getElementById('intro-sex-female').checked = true;
+        }
+        document.getElementById('intro-age').value = parseInt(userInputs.currentAge);
+        document.getElementById('intro-retireAge').value = parseInt(userInputs.retireAge);
+        document.getElementById('intro-targetIncome').value = parseInt(userInputs.retireIncome);
+        document.getElementById('intro-principal').value = parseInt(userInputs.savings);
+        document.getElementById('intro-estate').value = parseInt(userInputs.estate);
+    }
+
     // A test to activate the submit button
     function verify () {
         if (genderCheck == true && currentAgeCheck == true && retireAgeCheck == true && incomeCheck == true) {

@@ -12,7 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $timestamp = filter_input(INPUT_POST, 'timestamp',FILTER_SANITIZE_STRING);
     $form_action = filter_input(INPUT_POST, 'formAction',FILTER_SANITIZE_STRING);
     $form_hash = filter_input(INPUT_POST, 'formHash',FILTER_SANITIZE_STRING);
-  
+
+    # Data to send back to the console
+    $data['gender'] = $gender;
+    $data['currentAge'] = $currentAge;
+    $data['retireAge'] = $retireAge;
+    $data['retireIncome'] = $retireIncome;
+    $data['savings'] = $savings;
+    $data['estate'] = $estate;
     
     # Connection details
     include('connection.php');

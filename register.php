@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/access.css">
   <link rel="stylesheet" href="css/style.css">
   <title>ClockOut 2021 - Register </title>
 </head>
@@ -28,7 +27,7 @@
     </div>
 
     <div id="container">
-        <div class="newCard">
+        <div class="accessCard newCard">
             <div class="content">
                 <h2>Register</h2>
                 <p>Enter your information below. You'll receive an email with a link to validate your account.</p>

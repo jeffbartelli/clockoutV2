@@ -14,7 +14,6 @@ include 'controllers/authController.php';
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/access.css">
   <title>ClockOut 2021 - Login</title>
 </head>
 <body>
@@ -30,7 +29,7 @@ include 'controllers/authController.php';
     </div>
 
   <div id="container">
-    <div class="newCard">
+    <div class="accessCard newCard">
       <div class="content">
         <h2>Login</h2>
           <!-- PHP if statement for displaying error messages -->

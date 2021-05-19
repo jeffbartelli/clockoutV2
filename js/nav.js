@@ -19,30 +19,3 @@ const navSlide = () => {
     });
 };
 navSlide();
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('nav-login').addEventListener('click',function(e) {
-        $('#login').show();
-    });
-
-    document.getElementById('nav-register').addEventListener('click',function(e) {
-        $('#register').show();
-        $('.register').show();
-    });
-});
-
-
-
-// document.getElementById('scrollIntroForm').addEventListener('click',()=>{
-//     document.getElementById('introForm').scrollIntoView();
-// });
-
-
-// $("#scrollIntroForm").click(function(e) {
-//     console.log('trigger');
-//     e.preventDefault();
-//     $('body, html').animate({
-//         scrollTop: $("#introForm").offset().top
-//     }, 1000);
-//     console.log('trigger too');
-// });

@@ -38,7 +38,7 @@ $hash = hash('sha512', $str);
             <div class="content">
                 <h2>Welcome to Clockout</h2>
                 <h3>The web's best retirement toolbox</h3>
-                <p>Clockout provides a complete toolset for planning for your retirement. Start with the basic retirement calculator below to determine how much money you will need to save to retire by your target retirement date. On click, the screen should scroll to the next card.</p>
+                <p>Clockout provides a complete toolset for planning for your retirement. Start with the basic retirement calculator below to determine how much money you will need to save to retire by your target retirement date.</p>
                 <a href="https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form" target="_blank">Password reset</a>
                 <a href="#introForm" class="cardButton">Get Started</a>
             </div>
