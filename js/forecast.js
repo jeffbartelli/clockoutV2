@@ -6,14 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentAgeCheck = false;
     let retireAgeCheck = false;
     let incomeCheck = false;
-    localStorage.setItem("introComplete","false");
+    if (localStorage.getItem("introComplete") === null) {
+        localStorage.setItem("introComplete","false");
+    }
 
+    // A test to activate the submit button
     function verify () {
         if (genderCheck == true && currentAgeCheck == true && retireAgeCheck == true && incomeCheck == true) {
             document.getElementById('intro-submit').disabled = false;
         }
     }
 
+    // Tests to switch Check variables for the verify() function
     document.querySelectorAll('input[name="intro-sex"]').forEach((elem) => {
         elem.addEventListener("change", function(event) {
           genderCheck = true;
@@ -44,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Checks to ensure retire age is greater than current age
     document.getElementById('intro-retireAge').addEventListener('blur', () => {
         let age = document.getElementById('intro-age').value;
         let retireAgeField = document.getElementById('intro-retireAge');
@@ -60,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Tests to ensure no non-numeric characters are accepted
     document.getElementById('intro-targetIncome').addEventListener('keyup', function(e) {
         let invalidChars = ["-","+","e",];
         if (invalidChars.includes(e.key)) {
@@ -83,26 +89,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Actions to execute upon intro form submission
     document.getElementById('intro-submit').addEventListener('click', function(e) {
-        e.preventDefault();
 
-        let introResponse = {
-            "gender" : document.getElementById('intro-sex-male').checked ? "male" : "female",
-            "currentAge" : document.getElementById('intro-age').value,
-            "retireAge" : document.getElementById('intro-retireAge').value,
-            "retireIncome" : document.getElementById('intro-targetIncome').value,
-            "savings" : document.getElementById('intro-principal').value || 0,
-            "estate" : document.getElementById('intro-estate').value || 0,
-            "timestamp" : document.getElementById('timestamp').value,
-            "formAction" : document.getElementById('form-action').value,
-            "formHash" : document.getElementById('form-hash').value,
+        // Aggregate data to send to the db
+        var introResponse = {
+            gender : document.getElementById('intro-sex-male').checked ? "male" : "female",
+            currentAge : document.getElementById('intro-age').value,
+            retireAge : document.getElementById('intro-retireAge').value,
+            retireIncome : document.getElementById('intro-targetIncome').value,
+            savings : document.getElementById('intro-principal').value || 0,
+            estate : document.getElementById('intro-estate').value || 0,
+            timestamp : document.getElementById('timestamp').value,
+            formAction : document.getElementById('form-action').value,
+            formHash : document.getElementById('form-hash').value,
         }
+
+        // Put the user data in session storage for use in other forms
         sessionStorage.setItem('intro-response', JSON.stringify(introResponse));
 
-        console.log('before ajax call');
-        console.log(localStorage.introComplete);
+        // This sends user intro-calculator values to the db, only on the first usage.
         if (localStorage.introComplete === "false") {
-            console.log('introComplete = false');
             $.ajax({
                 type: 'POST',
                 url: 'introResponse.php',
@@ -110,20 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 dataType: 'json',
                 encode: true,
                 success: function(data){
-                    alert(data);
+                    console.log(data);
+                    localStorage.setItem("introComplete","true");
                 },
                 error: function(xhr, status, error){
-                    console.log(xhr, status, error);
+                    console.log(error);
                 }
-            })
-            // .then((data) => {
-            //     if (data == true) {
-            //         localStorage.setItem("introComplete","true");
-            //     }
-            //     console.log(data);
-            //     console.log('mission accomplished');
-            // });
-            console.log('end of if');
+            });
         }
 
         // Some code to try and make both the form and results divs the same height
@@ -164,5 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('intro-results-nestEgg').textContent = dollarFormat.format(nestEgg+estate);
         document.getElementById('intro-results-monthlySave').textContent = dollarFormat.format(monthlySave);
         document.getElementById('intro-submit').value = "Update";
+    
+        e.preventDefault();
     });
 });
