@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem("introComplete") === null) {
         localStorage.setItem("introComplete","false");
     }
+    
+    // A test to activate the submit button
+    function verify () {
+        if (genderCheck == true && currentAgeCheck == true && retireAgeCheck == true && incomeCheck == true) {
+            document.getElementById('intro-submit').disabled = false;
+        }
+    }
 
     // If sessionStorage has intro form data then populate form values
     if (sessionStorage.getItem('intro-response') !== null) {
@@ -19,18 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (userInputs.gender === "female") {
             document.getElementById('intro-sex-female').checked = true;
         }
+        genderCheck = true;
         document.getElementById('intro-age').value = parseInt(userInputs.currentAge);
+        currentAgeCheck = true;
         document.getElementById('intro-retireAge').value = parseInt(userInputs.retireAge);
+        retireAgeCheck = true;
         document.getElementById('intro-targetIncome').value = parseInt(userInputs.retireIncome);
+        incomeCheck = true;
         document.getElementById('intro-principal').value = parseInt(userInputs.savings);
         document.getElementById('intro-estate').value = parseInt(userInputs.estate);
-    }
-
-    // A test to activate the submit button
-    function verify () {
-        if (genderCheck == true && currentAgeCheck == true && retireAgeCheck == true && incomeCheck == true) {
-            document.getElementById('intro-submit').disabled = false;
-        }
+        verify();
     }
 
     // Tests to switch Check variables for the verify() function
@@ -144,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Some code to try and make both the form and results divs the same height
         let height = $('#intro-form-result').outerHeight();
-        $('#intro-form').outerHeight(height);
+        // $('#intro-form').outerHeight(height);
 
         $("#intro-form").animate({
             height: height + "px",
@@ -152,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if ($('#intro-submit').val() == "Calculate") {
-            $('#intro-form-result').outerHeight(height);
+            // $('#intro-form-result').outerHeight(height);
             $("#intro-form-result").animate({width: "toggle"});
             $('#intro-submit').val("Update");
         } else if ($('#intro-submit').val() == "Submit") {

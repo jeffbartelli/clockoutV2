@@ -54,10 +54,10 @@ $hash = hash('sha512', $str);
                         <div id="form-container">
                         <div>
                             <label for="intro-sex">Gender:</label>
-                            <input class="" type="radio" name="intro-sex" id="intro-sex-male" value="male">
                             <label class="" for="intro-sex-male">Male</label>
-                            <input class="" type="radio" name="intro-sex" id="intro-sex-female" value="female">
+                            <input class="" type="radio" name="intro-sex" id="intro-sex-male" value="male">
                             <label class="" for="intro-sex-female">Female</label>
+                            <input class="" type="radio" name="intro-sex" id="intro-sex-female" value="female">
                         </div>
                         
                         <label for="intro-age">How Old Are You?</label>
@@ -107,16 +107,17 @@ $hash = hash('sha512', $str);
         <div class="newCard" id="planner-tool">
             <div class="content">
                 <h2>Retirement Planner</h2>
-                <h3>text</h3>
-                <p>START BUILDING OUT THIS CARD AFTER ESTABLISHING A DB CONNECTION FOR STORING USER ENTRIES FROM THE INTRO SURVEY.</p>
+                <h3>Basic Information</h3>
+                <p>BEGIN ENTERING PERSONAL INFORMATION HERE. THEN CHECK THE BOX FOR EACH TYPE OF ACCOUNT AND ASSET THAT YOU HAVE. YOU WILL THEN ENTER BASIC INFORMATION ABOUT EACH OF YOUR SELECTIONS. HAVE YOUR SAVINGS AND RETIREMENT INFORMATION ON HAND BEFORE YOU BEGIN. IF YOU HAVE YOUR INFORMATION, EACH SECTION CAN BE COMPLETED IN ABOUT A MINUTE. SOON YOU'LL KNOW WHEN YOU CAN RETIRE AND HOW TO SPEND FROM YOUR ACCOUNTS OVER TIME TO ENSURE YOU NEVER RUN OUT OF MONEY.</p>
+                <?php include('planner.php'); ?>
             </div>
         </div>
 
-        <div class="newCard" id="about">
+        <div class="" id="about">
             <div class="content">
                 <h2>About</h2>
                 <h3>text</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia? Corrupti blanditiis fugit magni amet.</p>
+                <p>I want to have links to my other pages here, presented as glass tiles?, A contact form, header links, a brief about paragraph, and links to my various socials.</p>
             </div>
         </div>
     </div>   

@@ -68,7 +68,9 @@ body {
 
 #container .newCard .content {
   padding: 20px;
-  text-align: center;
+  text-align: left;
+  justify-content: left;
+  align-items: unset;
   transition: 0.5s;
 }
 
@@ -92,10 +94,10 @@ body {
 }
 
 #container .newCard .content .cardButton {
-  position: relative;
-  display: block;
+  /* position: relative;
+  display: block; */
   padding: 4px 20px;
-  margin: 15px auto 0 auto;
+  /* margin: 15px auto 0 auto; */
   /* background: rgba(108, 255, 160, 0.726); */
   background: rgba(0, 0, 0, 0.4);
   color: rgba(255,255,255,0.8);
@@ -146,7 +148,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
 }
 
 #intro-form {
@@ -160,6 +162,7 @@ body {
   display: none;
   width: 95%;
   flex: none;
+  justify-content: center !important;
 }
 
 .intro-form-result h2 {
@@ -173,8 +176,6 @@ body {
   color: #fff;
   z-index: 1;
 }
-
-
 
 /* .intro-btn-group {
   display: flex;
@@ -194,7 +195,7 @@ body {
 
 /* Form Inputs */
 
-.newCard input[type="text"], input[type="number"], input[type="password"], input[type="email"] {
+.newCard input[type="text"], input[type="number"], input[type="password"], input[type="email"], input[type="date"], input[type="submit"], input[type="button"], select {
   background: rgba(22, 29, 16, 0.5);
   border-bottom: 1px solid rgba(255,255,255,0.5);
   border-right: 1px solid rgba(255,255,255,0.5);
@@ -203,15 +204,15 @@ body {
   border-radius: 3px;
   color: rgba(255,255,255,0.8);
   display: block;
-  margin: 0 auto;
-  text-align: center;
+  /* margin: 0 auto; */
+  text-align: left;
 }
 
-.newCard input[type="text"]::placeholder, input[type="number"]::placeholder, input[type="password"]::placeholder {
+.newCard input[type="text"]::placeholder, input[type="number"]::placeholder, input[type="password"]::placeholder, input[type="date"]::placeholder, input[type="submit"]::placeholder, input[type="button"],::placeholder  select::placeholder {
   color: rgba(255,255,255,0.6);
 }
 
-.newCard input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus {
+.newCard input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="submit"]:focus, input[type="button"]:focus, select:focus {
   background: rgba(22, 29, 16, 0.8);
   border-right: 1px solid rgba(255,255,255,0.7);
   border-bottom: 1px solid rgba(255,255,255,0.7);
@@ -219,6 +220,18 @@ body {
   border-left: 1px solid rgba(0,0,0,0.1);
   color: rgba(255,255,255,0.9);
   outline: none !important;
+}
+
+#form-container input, select, label {
+  margin-left: 10vw;
+}
+
+#form-container > div > input, select {
+  margin-left: unset !important;
+}
+
+#form-container > div > label[for="intro-sex-male"],label[for="intro-sex-female"] {
+  margin-left: 3vw !important;
 }
 
 
@@ -248,4 +261,22 @@ body {
 
 .accessAlerts li {
   list-style-type: square;
+}
+
+#calcLineBreak {
+  color: #fff;
+}
+
+/* Footer */
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  padding: 10px;
+  background: rgba(22, 29, 16, 0.5);
+  z-index: 10; 
+  color: rgb(231, 231, 231);
 }
