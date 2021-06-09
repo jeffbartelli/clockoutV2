@@ -93,11 +93,11 @@ body {
   margin: 10px auto 5px auto;
 }
 
-#container .newCard .content .cardButton {
+.cardButton {
   /* position: relative;
   display: block; */
   padding: 4px 20px;
-  /* margin: 15px auto 0 auto; */
+  margin: 15px 0 0 0;
   /* background: rgba(108, 255, 160, 0.726); */
   background: rgba(0, 0, 0, 0.4);
   color: rgba(255,255,255,0.8);
@@ -112,7 +112,7 @@ body {
   max-width: 300px;
 }
 
-#container .newCard .content .cardButton:hover {
+.cardButton:hover {
   /* background: rgba(99, 250, 152, 0.836); */
   background: rgba(0, 0, 0, 0.7);
   border-bottom: 2px solid rgba(255,255,255,0.4);
@@ -120,14 +120,14 @@ body {
   border-left: 1px solid rgba(255,255,255,0.2);
 }
 
-#container .newCard .content .cardButton:active {
+.cardButton:active {
   background: rgba(0, 0, 0, 0.9);
   border-bottom: 2px solid rgba(255,255,255,0.2);
   border-right: 2px solid rgba(255,255,255,0.2);
   border-left: 1px solid rgba(255,255,255,0.1);
 }
 
-#container .newCard .content .cardButton:disabled {
+.cardButton:disabled {
   background: rgba(22, 29, 16, 0.5);
   border-bottom: 1px solid rgba(255,255,255,0.5);
   border-right: 1px solid rgba(255,255,255,0.5);
@@ -222,9 +222,9 @@ body {
   outline: none !important;
 }
 
-#form-container input, select, label {
+/* #form-container input, select, label {
   margin-left: 10vw;
-}
+} */
 
 #form-container > div > input, select {
   margin-left: unset !important;

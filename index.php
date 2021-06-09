@@ -18,6 +18,7 @@ $hash = hash('sha512', $str);
     <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accordion.css">    
 </head>
 <body>
     <div>
@@ -40,7 +41,7 @@ $hash = hash('sha512', $str);
                 <h3>The web's best retirement toolbox</h3>
                 <p>Clockout provides a complete toolset for planning for your retirement. Start with the basic retirement calculator below to determine how much money you will need to save to retire by your target retirement date.</p>
                 <a href="https://codewithawa.com/posts/check-if-user-already-exists-without-submitting-form" target="_blank">Password reset</a>
-                <a href="#introForm" class="cardButton">Get Started</a>
+                <input type="button" class="cardButton" onclick="location.href='#introForm'" value="Get Started" />
             </div>
         </div>
 
@@ -100,7 +101,7 @@ $hash = hash('sha512', $str);
             </div>
 
             <div class="content">
-                <input type="submit" class="cardButton" name="intro-submit" id="intro-submit" value="Calculate" disabled>
+                <input type="button" class="cardButton" name="intro-submit" id="intro-submit" value="Calculate" disabled>
             </div>
         </div>
 
@@ -109,8 +110,40 @@ $hash = hash('sha512', $str);
                 <h2>Retirement Planner</h2>
                 <h3>Basic Information</h3>
                 <p>BEGIN ENTERING PERSONAL INFORMATION HERE. THEN CHECK THE BOX FOR EACH TYPE OF ACCOUNT AND ASSET THAT YOU HAVE. YOU WILL THEN ENTER BASIC INFORMATION ABOUT EACH OF YOUR SELECTIONS. HAVE YOUR SAVINGS AND RETIREMENT INFORMATION ON HAND BEFORE YOU BEGIN. IF YOU HAVE YOUR INFORMATION, EACH SECTION CAN BE COMPLETED IN ABOUT A MINUTE. SOON YOU'LL KNOW WHEN YOU CAN RETIRE AND HOW TO SPEND FROM YOUR ACCOUNTS OVER TIME TO ENSURE YOU NEVER RUN OUT OF MONEY.</p>
-                <?php include('planner.php'); ?>
+                <div class="content">
+                    <?php include('content/planner.php'); ?>
+                </div>
             </div>
+            <div class="content">
+                <input type="button" value="Begin" class="cardButton">
+            </div>
+        </div>
+
+        <div class="newCard">
+            <!-- Source Code: https://codepen.io/codiesbugs/pen/zYqzvZW -->
+        <div class="accordion-wrapper">
+            <div class="accordion">
+                <input type="radio" name="radio-a" id="check1" class="accordion-radio" checked>
+                <label class="accordion-label" for="check1">Accordion 1</label>
+                <div class="accordion-content">
+                <p>Hey there, you are watching codiesbugs &#128522;</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="radio-a" id="check2" class="accordion-radio">
+                <label class="accordion-label" for="check2">Accordion 2</label>
+                <div class="accordion-content">
+                <p>I hope you are enjoing the video, don't forget to give your feedback in comment section</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="radio-a" id="check3" class="accordion-radio">
+                <label class="accordion-label" for="check3">Accordion 3</label>
+                <div class="accordion-content">
+                <p>If you liked then don't forget to subscribe the channel for latest videos. </p>
+                </div>
+            </div>
+        </div>
         </div>
 
         <div class="" id="about">
